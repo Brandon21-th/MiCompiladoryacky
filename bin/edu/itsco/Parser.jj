@@ -1,0 +1,70 @@
+/**
+ * JavaCC template file created by SF JavaCC plugin 1.5.28+ wizard for JavaCC 1.5.0+
+ */options{  static = true;}PARSER_BEGIN(Parser)package edu.itsco;
+
+public class Parser{  public static void main(String args []) throws ParseException  {    Parser parser = new Parser(System.in);             }}PARSER_END(Parser)SKIP :{  " "| "\r"| "\t"| "\n"}
+TOKEN: {//definicion de palabras reservadas
+  < INICIO:"inicio" >
+| < FIN: "fin" >
+
+| < ENTERO: "entero" >
+| < CADENA: "cadena" >
+| < FLOTANTE: "flotante" >
+
+| < VAR: "var" >
+
+| < ESCRIBIR: "escribir" >
+| < LEER: "leer" >
+
+| < SI: "si" >
+| <  SINO:" sino" >
+| < ENTONCES: "entonces" >
+
+| < SELECCIONA: "selecciona" >
+| < CASO: " caso" >
+| < DEFECTO: "defecto" >
+
+| < PARA: "para" >
+| < HASTA: "hasta" >
+| < SIGUIENTE: "siguiente" >
+
+| < HACER: "hacer" >
+| < MIENTRAS: "mientras" >
+
+}
+
+TOKEN: {//Area de operadores
+ < SUMA: "+" >
+| < RESTA: "-" >
+| < MULT: "*" >
+| < DIV: "/" >
+| < MOD: "%" >
+
+| < MAYOR: ">" >
+| < MENOR: "<" >
+| < IGUAL: "=" >
+
+| < AND: "&&" >
+| < OR: "||" >
+| < NOT: "!" >
+
+| < OPP: "(" >
+| < OPC: ")" >
+| <AC: "[" >
+| <CC: "]" >  
+}
+
+
+TOKEN: { //Area de tokens dinamicos
+<#letra: ["a"-"z","A"-"Z"] >
+| <#digitos:["0"-"9"] >
+
+| < IDENTIFICADOR: (< letra >| "_")(< letra >| < digitos >| "_" )* >
+
+| < VALOR_ENTERO:(< digitos >)+ >
+| < VALOR_FLOTANTE:(< digitos >)+"."(< digitos >)+ >
+| < VALOR_CADENA: "\""(~["\""])*"\"" >
+}
+
+
+
