@@ -39,57 +39,61 @@ public interface ParserConstants {
   /** RegularExpression Id. */
   int DEFECTO = 18;
   /** RegularExpression Id. */
-  int PARA = 19;
+  int ROMPE = 19;
   /** RegularExpression Id. */
-  int HASTA = 20;
+  int PARA = 20;
   /** RegularExpression Id. */
-  int SIGUIENTE = 21;
+  int HASTA = 21;
   /** RegularExpression Id. */
-  int HACER = 22;
+  int SIGUIENTE = 22;
   /** RegularExpression Id. */
-  int MIENTRAS = 23;
+  int HACER = 23;
   /** RegularExpression Id. */
-  int SUMA = 24;
+  int MIENTRAS = 24;
   /** RegularExpression Id. */
-  int RESTA = 25;
+  int SUMA = 25;
   /** RegularExpression Id. */
-  int MULT = 26;
+  int RESTA = 26;
   /** RegularExpression Id. */
-  int DIV = 27;
+  int MULTI = 27;
   /** RegularExpression Id. */
-  int MOD = 28;
+  int DIV = 28;
   /** RegularExpression Id. */
-  int MAYOR = 29;
+  int MOD = 29;
   /** RegularExpression Id. */
-  int MENOR = 30;
+  int MAYOR = 30;
   /** RegularExpression Id. */
-  int IGUAL = 31;
+  int MENOR = 31;
   /** RegularExpression Id. */
-  int AND = 32;
+  int IGUAL = 32;
   /** RegularExpression Id. */
-  int OR = 33;
+  int AND = 33;
   /** RegularExpression Id. */
-  int NOT = 34;
+  int OR = 34;
   /** RegularExpression Id. */
-  int OPP = 35;
+  int NOT = 35;
   /** RegularExpression Id. */
-  int OPC = 36;
+  int OPP = 36;
   /** RegularExpression Id. */
-  int AC = 37;
+  int OPC = 37;
   /** RegularExpression Id. */
-  int CC = 38;
+  int AC = 38;
   /** RegularExpression Id. */
-  int letra = 39;
+  int CC = 39;
   /** RegularExpression Id. */
-  int digitos = 40;
+  int DP = 40;
   /** RegularExpression Id. */
-  int IDENTIFICADOR = 41;
+  int letra = 41;
   /** RegularExpression Id. */
-  int VALOR_ENTERO = 42;
+  int digitos = 42;
   /** RegularExpression Id. */
-  int VALOR_FLOTANTE = 43;
+  int IDENTIFICADOR = 43;
   /** RegularExpression Id. */
-  int VALOR_CADENA = 44;
+  int VALOR_ENTERO = 44;
+  /** RegularExpression Id. */
+  int VALOR_FLOTANTE = 45;
+  /** RegularExpression Id. */
+  int VALOR_CADENA = 46;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -110,11 +114,12 @@ public interface ParserConstants {
     "\"escribir\"",
     "\"leer\"",
     "\"si\"",
-    "\" sino\"",
+    "\"sino\"",
     "\"entonces\"",
     "\"selecciona\"",
-    "\" caso\"",
+    "\"caso\"",
     "\"defecto\"",
+    "\"rompe\"",
     "\"para\"",
     "\"hasta\"",
     "\"siguiente\"",
@@ -135,6 +140,7 @@ public interface ParserConstants {
     "\")\"",
     "\"[\"",
     "\"]\"",
+    "\":\"",
     "<letra>",
     "<digitos>",
     "<IDENTIFICADOR>",
